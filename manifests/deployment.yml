@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: bnjmnandrepipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bnjmnandrepipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: bnjmnandrepipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: bnjmnandrepipelinesjavascriptdocker 
+          image: myappacr0115.azurecr.io/bnjmnandrepipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
